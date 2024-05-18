@@ -48,6 +48,7 @@
             // 
             // panel6
             // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.Controls.Add(this.panel3);
             this.panel6.Controls.Add(this.LnkToHomepage);
             this.panel6.Location = new System.Drawing.Point(786, 0);
@@ -73,9 +74,9 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.LkLblLogIn);
-            this.panel2.Location = new System.Drawing.Point(123, 430);
+            this.panel2.Location = new System.Drawing.Point(109, 430);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(241, 27);
+            this.panel2.Size = new System.Drawing.Size(255, 27);
             this.panel2.TabIndex = 34;
             // 
             // label7
@@ -93,12 +94,13 @@
             this.LkLblLogIn.AutoSize = true;
             this.LkLblLogIn.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LkLblLogIn.LinkColor = System.Drawing.Color.MidnightBlue;
-            this.LkLblLogIn.Location = new System.Drawing.Point(187, 4);
+            this.LkLblLogIn.Location = new System.Drawing.Point(197, 4);
             this.LkLblLogIn.Name = "LkLblLogIn";
             this.LkLblLogIn.Size = new System.Drawing.Size(52, 23);
             this.LkLblLogIn.TabIndex = 26;
             this.LkLblLogIn.TabStop = true;
             this.LkLblLogIn.Text = "Sign In";
+            this.LkLblLogIn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LkLblLogIn_LinkClicked);
             // 
             // panel1
             // 
@@ -116,7 +118,7 @@
             this.inputField5.BackColor = System.Drawing.Color.Transparent;
             this.inputField5.Location = new System.Drawing.Point(0, 3);
             this.inputField5.Name = "inputField5";
-            this.inputField5.PasswordCharType = '\0';
+            this.inputField5.PasswordCharType = '*';
             this.inputField5.Size = new System.Drawing.Size(450, 82);
             this.inputField5.TabIndex = 32;
             this.inputField5.Title = "Password";
@@ -180,6 +182,7 @@
             this.LnkToHomepage.TabIndex = 19;
             this.LnkToHomepage.TabStop = true;
             this.LnkToHomepage.Text = "Back";
+            this.LnkToHomepage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkToHomepage_LinkClicked);
             // 
             // LogIn
             // 

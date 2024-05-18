@@ -30,10 +30,5 @@ namespace Proiect
             hp.Show();
             this.Hide();
         }
-
-        private void SignUp_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

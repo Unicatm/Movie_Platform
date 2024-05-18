@@ -122,6 +122,7 @@
             // 
             // panel6
             // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.Controls.Add(this.panel3);
             this.panel6.Controls.Add(this.LnkToHomepage);
             this.panel6.Location = new System.Drawing.Point(785, 0);
@@ -169,7 +170,7 @@
             this.inputField5.BackColor = System.Drawing.Color.Transparent;
             this.inputField5.Location = new System.Drawing.Point(0, 3);
             this.inputField5.Name = "inputField5";
-            this.inputField5.PasswordCharType = '\0';
+            this.inputField5.PasswordCharType = '*';
             this.inputField5.Size = new System.Drawing.Size(450, 82);
             this.inputField5.TabIndex = 32;
             this.inputField5.Title = "Password";
@@ -224,7 +225,6 @@
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
-            this.Load += new System.EventHandler(this.SignUp_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
