@@ -36,15 +36,23 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TBPhoneNumber = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.Line = new System.Windows.Forms.Panel();
+            this.LblInputReg = new System.Windows.Forms.Label();
+            this.TxtBCNP = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.inputField5 = new Proiect.InputField();
-            this.inputField4 = new Proiect.InputField();
-            this.inputField3 = new Proiect.InputField();
             this.inputField2 = new Proiect.InputField();
             this.inputField1 = new Proiect.InputField();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +71,7 @@
             // BtnSignUp
             // 
             this.BtnSignUp.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BtnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSignUp.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSignUp.ForeColor = System.Drawing.Color.Transparent;
@@ -76,6 +85,7 @@
             // LnkToHomepage
             // 
             this.LnkToHomepage.AutoSize = true;
+            this.LnkToHomepage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LnkToHomepage.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkToHomepage.LinkColor = System.Drawing.Color.MidnightBlue;
             this.LnkToHomepage.Location = new System.Drawing.Point(16, 16);
@@ -89,6 +99,7 @@
             // CkBViewPassword
             // 
             this.CkBViewPassword.AutoSize = true;
+            this.CkBViewPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CkBViewPassword.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CkBViewPassword.Location = new System.Drawing.Point(0, 81);
             this.CkBViewPassword.Name = "CkBViewPassword";
@@ -96,10 +107,12 @@
             this.CkBViewPassword.TabIndex = 20;
             this.CkBViewPassword.Text = "Show Password";
             this.CkBViewPassword.UseVisualStyleBackColor = true;
+            this.CkBViewPassword.CheckedChanged += new System.EventHandler(this.CkBViewPassword_CheckedChanged);
             // 
             // LkLblLogIn
             // 
             this.LkLblLogIn.AutoSize = true;
+            this.LkLblLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LkLblLogIn.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LkLblLogIn.LinkColor = System.Drawing.Color.MidnightBlue;
             this.LkLblLogIn.Location = new System.Drawing.Point(182, 4);
@@ -132,10 +145,10 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.panel1);
-            this.panel3.Controls.Add(this.inputField4);
-            this.panel3.Controls.Add(this.inputField3);
             this.panel3.Controls.Add(this.inputField2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.inputField1);
@@ -144,6 +157,86 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(484, 738);
             this.panel3.TabIndex = 35;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.TBPhoneNumber);
+            this.panel5.Location = new System.Drawing.Point(17, 403);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(457, 84);
+            this.panel5.TabIndex = 36;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel7.Location = new System.Drawing.Point(3, 76);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(450, 1);
+            this.panel7.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 30);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Phone Number";
+            // 
+            // TBPhoneNumber
+            // 
+            this.TBPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TBPhoneNumber.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBPhoneNumber.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.TBPhoneNumber.Location = new System.Drawing.Point(3, 33);
+            this.TBPhoneNumber.Multiline = true;
+            this.TBPhoneNumber.Name = "TBPhoneNumber";
+            this.TBPhoneNumber.Size = new System.Drawing.Size(450, 40);
+            this.TBPhoneNumber.TabIndex = 28;
+            this.TBPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBPhoneNumber_KeyPress);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.Line);
+            this.panel4.Controls.Add(this.LblInputReg);
+            this.panel4.Controls.Add(this.TxtBCNP);
+            this.panel4.Location = new System.Drawing.Point(17, 306);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(457, 84);
+            this.panel4.TabIndex = 35;
+            // 
+            // Line
+            // 
+            this.Line.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Line.Location = new System.Drawing.Point(3, 76);
+            this.Line.Name = "Line";
+            this.Line.Size = new System.Drawing.Size(450, 1);
+            this.Line.TabIndex = 28;
+            // 
+            // LblInputReg
+            // 
+            this.LblInputReg.AutoSize = true;
+            this.LblInputReg.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblInputReg.Location = new System.Drawing.Point(3, 0);
+            this.LblInputReg.Name = "LblInputReg";
+            this.LblInputReg.Size = new System.Drawing.Size(50, 30);
+            this.LblInputReg.TabIndex = 29;
+            this.LblInputReg.Text = "CNP";
+            // 
+            // TxtBCNP
+            // 
+            this.TxtBCNP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBCNP.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBCNP.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.TxtBCNP.Location = new System.Drawing.Point(3, 33);
+            this.TxtBCNP.Multiline = true;
+            this.TxtBCNP.Name = "TxtBCNP";
+            this.TxtBCNP.Size = new System.Drawing.Size(450, 40);
+            this.TxtBCNP.TabIndex = 28;
+            this.TxtBCNP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBCNP_KeyPress);
             // 
             // panel2
             // 
@@ -174,26 +267,6 @@
             this.inputField5.Size = new System.Drawing.Size(450, 82);
             this.inputField5.TabIndex = 32;
             this.inputField5.Title = "Password";
-            // 
-            // inputField4
-            // 
-            this.inputField4.BackColor = System.Drawing.Color.Transparent;
-            this.inputField4.Location = new System.Drawing.Point(17, 405);
-            this.inputField4.Name = "inputField4";
-            this.inputField4.PasswordCharType = '\0';
-            this.inputField4.Size = new System.Drawing.Size(450, 82);
-            this.inputField4.TabIndex = 31;
-            this.inputField4.Title = "Phone Number";
-            // 
-            // inputField3
-            // 
-            this.inputField3.BackColor = System.Drawing.Color.Transparent;
-            this.inputField3.Location = new System.Drawing.Point(17, 304);
-            this.inputField3.Name = "inputField3";
-            this.inputField3.PasswordCharType = '\0';
-            this.inputField3.Size = new System.Drawing.Size(450, 82);
-            this.inputField3.TabIndex = 30;
-            this.inputField3.Title = "CNP";
             // 
             // inputField2
             // 
@@ -229,6 +302,10 @@
             this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -248,11 +325,17 @@
         private System.Windows.Forms.Panel panel6;
         private InputField inputField1;
         private InputField inputField2;
-        private InputField inputField3;
-        private InputField inputField4;
         private InputField inputField5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label LblInputReg;
+        private System.Windows.Forms.TextBox TxtBCNP;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel Line;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TBPhoneNumber;
     }
 }

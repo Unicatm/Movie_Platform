@@ -50,6 +50,7 @@
             // 
             // BtnLogIn
             // 
+            this.BtnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnLogIn.Location = new System.Drawing.Point(6, 7);
             this.BtnLogIn.Name = "BtnLogIn";
             this.BtnLogIn.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
@@ -61,6 +62,7 @@
             // 
             // BtnSignUp
             // 
+            this.BtnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSignUp.Location = new System.Drawing.Point(188, 7);
             this.BtnSignUp.Name = "BtnSignUp";
             this.BtnSignUp.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
@@ -74,7 +76,7 @@
             // 
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(498, 157);
+            this.panel1.Location = new System.Drawing.Point(453, 148);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(416, 389);
             this.panel1.TabIndex = 3;
@@ -93,7 +95,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1582, 853);
+            this.ClientSize = new System.Drawing.Size(1382, 853);
             this.Controls.Add(this.panel1);
             this.Name = "Homepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -43,6 +43,7 @@ namespace Proiect
             }
         }
 
+
         [Category("Custom Props")]
         public string TxtBName
         {
@@ -56,6 +57,8 @@ namespace Proiect
             get { return TxtBInputReg.PasswordChar; }
             set { TxtBInputReg.PasswordChar = value; }
         }
+
+        public string InpFName { get; internal set; }
 
 
         #endregion

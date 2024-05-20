@@ -40,5 +40,16 @@ namespace Proiect
             signUp.Show();
             this.Hide();
         }
+
+        private void CkBViewPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if(CkBViewPassword.Checked == true) {
+                inputField5.PasswordCharType = '\0';
+            }
+            else
+            {
+                inputField5.PasswordCharType = '*';
+            }
+        }
     }
 }

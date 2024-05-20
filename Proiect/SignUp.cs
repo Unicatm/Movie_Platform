@@ -30,5 +30,29 @@ namespace Proiect
             hp.Show();
             this.Hide();
         }
+
+        private void CkBViewPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CkBViewPassword.Checked == true)
+            {
+                inputField5.PasswordCharType = '\0';
+            }
+            else
+            {
+                inputField5.PasswordCharType = '*';
+            }
+        }
+
+        private void TxtBCNP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) & !char.IsControl(e.KeyChar))
+                //if (e.KeyChar < '0' || e.KeyChar > '9')
+                e.Handled = true;
+        }
+
+        private void TBPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TxtBCNP_KeyPress (sender, e);
+        }
     }
 }
