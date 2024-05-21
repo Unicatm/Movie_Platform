@@ -30,5 +30,12 @@ namespace Proiect
             signUp.Show();
             this.Hide();
         }
+
+        private void Admin_Click(object sender, EventArgs e)
+        {
+            AdminInterfata admin = new AdminInterfata();
+            admin.Show();
+            this.Hide();
+        }
     }
 }

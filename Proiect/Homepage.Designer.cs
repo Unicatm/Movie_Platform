@@ -33,6 +33,7 @@
             this.BtnSignUp = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Admin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -90,12 +91,25 @@
             this.panel2.Size = new System.Drawing.Size(339, 71);
             this.panel2.TabIndex = 3;
             // 
+            // Admin
+            // 
+            this.Admin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Admin.Location = new System.Drawing.Point(914, 464);
+            this.Admin.Name = "Admin";
+            this.Admin.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
+            this.Admin.Size = new System.Drawing.Size(142, 56);
+            this.Admin.TabIndex = 4;
+            this.Admin.Text = "Admin";
+            this.Admin.UseVisualStyleBackColor = true;
+            this.Admin.Click += new System.EventHandler(this.Admin_Click);
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1382, 853);
+            this.Controls.Add(this.Admin);
             this.Controls.Add(this.panel1);
             this.Name = "Homepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -114,6 +128,7 @@
         private System.Windows.Forms.Button BtnSignUp;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button Admin;
     }
 }
 

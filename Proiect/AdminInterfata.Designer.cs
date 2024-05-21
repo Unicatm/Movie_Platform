@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGFilme = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.salvareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restaurareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xMLToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.LbAdminEmail = new System.Windows.Forms.Label();
             this.filmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adaugareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LbAdminEmail = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGFilme)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DGFilme
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 131);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1300, 700);
-            this.dataGridView1.TabIndex = 0;
+            this.DGFilme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGFilme.Location = new System.Drawing.Point(36, 131);
+            this.DGFilme.Name = "DGFilme";
+            this.DGFilme.RowHeadersWidth = 51;
+            this.DGFilme.RowTemplate.Height = 24;
+            this.DGFilme.Size = new System.Drawing.Size(1300, 700);
+            this.DGFilme.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -80,7 +80,7 @@
             // xMLToolStripMenuItem
             // 
             this.xMLToolStripMenuItem.Name = "xMLToolStripMenuItem";
-            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(127, 28);
             this.xMLToolStripMenuItem.Text = "XML";
             // 
             // restaurareToolStripMenuItem
@@ -96,19 +96,8 @@
             // xMLToolStripMenuItem1
             // 
             this.xMLToolStripMenuItem1.Name = "xMLToolStripMenuItem1";
-            this.xMLToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
+            this.xMLToolStripMenuItem1.Size = new System.Drawing.Size(127, 28);
             this.xMLToolStripMenuItem1.Text = "XML";
-            // 
-            // LbAdminEmail
-            // 
-            this.LbAdminEmail.AutoSize = true;
-            this.LbAdminEmail.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LbAdminEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbAdminEmail.Location = new System.Drawing.Point(1070, 9);
-            this.LbAdminEmail.Name = "LbAdminEmail";
-            this.LbAdminEmail.Size = new System.Drawing.Size(173, 25);
-            this.LbAdminEmail.TabIndex = 2;
-            this.LbAdminEmail.Text = "admin@gmial.com";
             // 
             // filmToolStripMenuItem
             // 
@@ -123,8 +112,19 @@
             // adaugareToolStripMenuItem
             // 
             this.adaugareToolStripMenuItem.Name = "adaugareToolStripMenuItem";
-            this.adaugareToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.adaugareToolStripMenuItem.Size = new System.Drawing.Size(168, 28);
             this.adaugareToolStripMenuItem.Text = "Adaugare";
+            // 
+            // LbAdminEmail
+            // 
+            this.LbAdminEmail.AutoSize = true;
+            this.LbAdminEmail.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LbAdminEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbAdminEmail.Location = new System.Drawing.Point(1070, 9);
+            this.LbAdminEmail.Name = "LbAdminEmail";
+            this.LbAdminEmail.Size = new System.Drawing.Size(173, 25);
+            this.LbAdminEmail.TabIndex = 2;
+            this.LbAdminEmail.Text = "admin@gmial.com";
             // 
             // button1
             // 
@@ -144,12 +144,13 @@
             this.ClientSize = new System.Drawing.Size(1382, 853);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LbAdminEmail);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGFilme);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdminInterfata";
             this.Text = "AdminInterfata";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.AdminInterfata_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGFilme)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -159,7 +160,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGFilme;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem salvareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xMLToolStripMenuItem;
