@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ArrayOfFilm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Film>
+    <IdFilm>1</IdFilm>
+    <Titlu>sds</Titlu>
+    <Descriere>wdww</Descriere>
+    <Bucati>5</Bucati>
+    <AnLansare>2024-05-24T16:41:58.8134688+03:00</AnLansare>
+    <Durata>0</Durata>
+  </Film>
+  <Film>
+    <IdFilm>5</IdFilm>
+    <Titlu>ww</Titlu>
+    <Descriere>wsdsd</Descriere>
+    <Bucati>4</Bucati>
+    <AnLansare>2024-05-24T16:42:04.566479+03:00</AnLansare>
+    <Durata>0</Durata>
+  </Film>
+</ArrayOfFilm>

@@ -54,5 +54,10 @@ namespace Proiect
         {
             TxtBCNP_KeyPress (sender, e);
         }
+
+        private void TxtBCNP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

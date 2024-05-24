@@ -236,6 +236,7 @@
             this.TxtBCNP.Name = "TxtBCNP";
             this.TxtBCNP.Size = new System.Drawing.Size(450, 40);
             this.TxtBCNP.TabIndex = 28;
+            this.TxtBCNP.TextChanged += new System.EventHandler(this.TxtBCNP_TextChanged);
             this.TxtBCNP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBCNP_KeyPress);
             // 
             // panel2
