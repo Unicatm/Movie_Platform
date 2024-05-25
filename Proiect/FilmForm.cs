@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,8 @@ namespace Proiect
 
         private void FilmForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'filme_dbDS.filme_tbl' table. You can move, or remove it, as needed.
+            //this.filme_tblTableAdapter.Fill(this.filme_dbDS.filme_tbl);
 
         }
 
@@ -57,6 +60,7 @@ namespace Proiect
             fSecundar.AnLansare = DTAn.Value;
             fSecundar.Gen = CBGen.SelectedItem.ToString();
             fSecundar.Durata = Convert.ToInt32(TBDurata.Text);
+
         }
 
         private void TBId_KeyPress(object sender, KeyPressEventArgs e)
@@ -100,6 +104,21 @@ namespace Proiect
         private void panel13_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void filme_tblBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog of = new OpenFileDialog();
+            of.Filter = "Image(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
+            if (of.ShowDialog() == DialogResult.OK)
+            {
+                fSecundar.ImgSRC = of.FileName;
+            }
         }
     }
 }

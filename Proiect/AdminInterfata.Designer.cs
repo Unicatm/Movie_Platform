@@ -29,28 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.DGFilme = new System.Windows.Forms.DataGridView();
-            this.idfilmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CMenuOperations = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.adaugaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editeazaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stergeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filmetblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.filme_dbDataSet = new Proiect.filme_dbDataSet();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.salvareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.binarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restaurareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xMLToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.binarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.filmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adaugareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LbAdminEmail = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.filme_tblTableAdapter = new Proiect.filme_dbDataSetTableAdapters.filme_tblTableAdapter();
             this.LVFilme = new System.Windows.Forms.ListView();
             this.id_film = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.titlu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,83 +51,26 @@
             this.stoc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.data_aparitie = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.binarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.binarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.durata = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            ((System.ComponentModel.ISupportInitialize)(this.DGFilme)).BeginInit();
+            this.filme_dbDS = new Proiect.filme_dbDS();
+            this.filme_tblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.filme_tblTableAdapter = new Proiect.filme_dbDSTableAdapters.filme_tblTableAdapter();
+            this.tableAdapterManager = new Proiect.filme_dbDSTableAdapters.TableAdapterManager();
+            this.filme_tblDataGridView = new System.Windows.Forms.DataGridView();
+            this.idfilmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LnkToHomepage = new System.Windows.Forms.LinkLabel();
             this.CMenuOperations.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.filmetblBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filme_dbDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filme_dbDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filme_tblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filme_tblDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DGFilme
-            // 
-            this.DGFilme.AllowUserToAddRows = false;
-            this.DGFilme.AllowUserToDeleteRows = false;
-            this.DGFilme.AutoGenerateColumns = false;
-            this.DGFilme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGFilme.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idfilmDataGridViewTextBoxColumn,
-            this.titluDataGridViewTextBoxColumn,
-            this.descriereDataGridViewTextBoxColumn,
-            this.stocDataGridViewTextBoxColumn,
-            this.genDataGridViewTextBoxColumn});
-            this.DGFilme.ContextMenuStrip = this.CMenuOperations;
-            this.DGFilme.DataSource = this.filmetblBindingSource;
-            this.DGFilme.Location = new System.Drawing.Point(662, 131);
-            this.DGFilme.Name = "DGFilme";
-            this.DGFilme.ReadOnly = true;
-            this.DGFilme.RowHeadersWidth = 51;
-            this.DGFilme.RowTemplate.Height = 24;
-            this.DGFilme.Size = new System.Drawing.Size(674, 700);
-            this.DGFilme.TabIndex = 0;
-            this.DGFilme.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGFilme_CellContentClick);
-            // 
-            // idfilmDataGridViewTextBoxColumn
-            // 
-            this.idfilmDataGridViewTextBoxColumn.DataPropertyName = "id_film";
-            this.idfilmDataGridViewTextBoxColumn.HeaderText = "id_film";
-            this.idfilmDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idfilmDataGridViewTextBoxColumn.Name = "idfilmDataGridViewTextBoxColumn";
-            this.idfilmDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idfilmDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // titluDataGridViewTextBoxColumn
-            // 
-            this.titluDataGridViewTextBoxColumn.DataPropertyName = "titlu";
-            this.titluDataGridViewTextBoxColumn.HeaderText = "titlu";
-            this.titluDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.titluDataGridViewTextBoxColumn.Name = "titluDataGridViewTextBoxColumn";
-            this.titluDataGridViewTextBoxColumn.ReadOnly = true;
-            this.titluDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // descriereDataGridViewTextBoxColumn
-            // 
-            this.descriereDataGridViewTextBoxColumn.DataPropertyName = "descriere";
-            this.descriereDataGridViewTextBoxColumn.HeaderText = "descriere";
-            this.descriereDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descriereDataGridViewTextBoxColumn.Name = "descriereDataGridViewTextBoxColumn";
-            this.descriereDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descriereDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // stocDataGridViewTextBoxColumn
-            // 
-            this.stocDataGridViewTextBoxColumn.DataPropertyName = "stoc";
-            this.stocDataGridViewTextBoxColumn.HeaderText = "stoc";
-            this.stocDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.stocDataGridViewTextBoxColumn.Name = "stocDataGridViewTextBoxColumn";
-            this.stocDataGridViewTextBoxColumn.ReadOnly = true;
-            this.stocDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // genDataGridViewTextBoxColumn
-            // 
-            this.genDataGridViewTextBoxColumn.DataPropertyName = "gen";
-            this.genDataGridViewTextBoxColumn.HeaderText = "gen";
-            this.genDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.genDataGridViewTextBoxColumn.Name = "genDataGridViewTextBoxColumn";
-            this.genDataGridViewTextBoxColumn.ReadOnly = true;
-            this.genDataGridViewTextBoxColumn.Width = 125;
             // 
             // CMenuOperations
             // 
@@ -168,16 +104,6 @@
             this.stergeToolStripMenuItem.Text = "Sterge";
             this.stergeToolStripMenuItem.Click += new System.EventHandler(this.stergeToolStripMenuItem_Click);
             // 
-            // filmetblBindingSource
-            // 
-            this.filmetblBindingSource.DataMember = "filme_tbl";
-            this.filmetblBindingSource.DataSource = this.filme_dbDataSet;
-            // 
-            // filme_dbDataSet
-            // 
-            this.filme_dbDataSet.DataSetName = "filme_dbDataSet";
-            this.filme_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.SandyBrown;
@@ -207,9 +133,16 @@
             // xMLToolStripMenuItem
             // 
             this.xMLToolStripMenuItem.Name = "xMLToolStripMenuItem";
-            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(133, 28);
             this.xMLToolStripMenuItem.Text = "XML";
             this.xMLToolStripMenuItem.Click += new System.EventHandler(this.xMLToolStripMenuItem_Click);
+            // 
+            // binarToolStripMenuItem
+            // 
+            this.binarToolStripMenuItem.Name = "binarToolStripMenuItem";
+            this.binarToolStripMenuItem.Size = new System.Drawing.Size(133, 28);
+            this.binarToolStripMenuItem.Text = "Binar";
+            this.binarToolStripMenuItem.Click += new System.EventHandler(this.binarToolStripMenuItem_Click);
             // 
             // restaurareToolStripMenuItem
             // 
@@ -225,9 +158,16 @@
             // xMLToolStripMenuItem1
             // 
             this.xMLToolStripMenuItem1.Name = "xMLToolStripMenuItem1";
-            this.xMLToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
+            this.xMLToolStripMenuItem1.Size = new System.Drawing.Size(133, 28);
             this.xMLToolStripMenuItem1.Text = "XML";
             this.xMLToolStripMenuItem1.Click += new System.EventHandler(this.xMLToolStripMenuItem1_Click);
+            // 
+            // binarToolStripMenuItem1
+            // 
+            this.binarToolStripMenuItem1.Name = "binarToolStripMenuItem1";
+            this.binarToolStripMenuItem1.Size = new System.Drawing.Size(133, 28);
+            this.binarToolStripMenuItem1.Text = "Binar";
+            this.binarToolStripMenuItem1.Click += new System.EventHandler(this.binarToolStripMenuItem1_Click);
             // 
             // filmToolStripMenuItem
             // 
@@ -266,10 +206,6 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // filme_tblTableAdapter
-            // 
-            this.filme_tblTableAdapter.ClearBeforeFill = true;
             // 
             // LVFilme
             // 
@@ -315,23 +251,119 @@
             // 
             this.gen.Text = "Gen";
             // 
-            // binarToolStripMenuItem
-            // 
-            this.binarToolStripMenuItem.Name = "binarToolStripMenuItem";
-            this.binarToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.binarToolStripMenuItem.Text = "Binar";
-            this.binarToolStripMenuItem.Click += new System.EventHandler(this.binarToolStripMenuItem_Click);
-            // 
-            // binarToolStripMenuItem1
-            // 
-            this.binarToolStripMenuItem1.Name = "binarToolStripMenuItem1";
-            this.binarToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
-            this.binarToolStripMenuItem1.Text = "Binar";
-            this.binarToolStripMenuItem1.Click += new System.EventHandler(this.binarToolStripMenuItem1_Click);
-            // 
             // durata
             // 
             this.durata.Text = "Durata";
+            // 
+            // filme_dbDS
+            // 
+            this.filme_dbDS.DataSetName = "filme_dbDS";
+            this.filme_dbDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // filme_tblBindingSource
+            // 
+            this.filme_tblBindingSource.DataMember = "filme_tbl";
+            this.filme_tblBindingSource.DataSource = this.filme_dbDS;
+            // 
+            // filme_tblTableAdapter
+            // 
+            this.filme_tblTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.filme_tblTableAdapter = this.filme_tblTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Proiect.filme_dbDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // filme_tblDataGridView
+            // 
+            this.filme_tblDataGridView.AutoGenerateColumns = false;
+            this.filme_tblDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.filme_tblDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idfilmDataGridViewTextBoxColumn,
+            this.titluDataGridViewTextBoxColumn,
+            this.descriereDataGridViewTextBoxColumn,
+            this.stocDataGridViewTextBoxColumn,
+            this.dataDataGridViewTextBoxColumn,
+            this.genDataGridViewTextBoxColumn,
+            this.durataDataGridViewTextBoxColumn});
+            this.filme_tblDataGridView.DataSource = this.filme_tblBindingSource;
+            this.filme_tblDataGridView.Location = new System.Drawing.Point(693, 131);
+            this.filme_tblDataGridView.Name = "filme_tblDataGridView";
+            this.filme_tblDataGridView.RowHeadersWidth = 51;
+            this.filme_tblDataGridView.RowTemplate.Height = 24;
+            this.filme_tblDataGridView.Size = new System.Drawing.Size(560, 520);
+            this.filme_tblDataGridView.TabIndex = 6;
+            // 
+            // idfilmDataGridViewTextBoxColumn
+            // 
+            this.idfilmDataGridViewTextBoxColumn.DataPropertyName = "id_film";
+            this.idfilmDataGridViewTextBoxColumn.HeaderText = "id_film";
+            this.idfilmDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idfilmDataGridViewTextBoxColumn.Name = "idfilmDataGridViewTextBoxColumn";
+            this.idfilmDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // titluDataGridViewTextBoxColumn
+            // 
+            this.titluDataGridViewTextBoxColumn.DataPropertyName = "titlu";
+            this.titluDataGridViewTextBoxColumn.HeaderText = "titlu";
+            this.titluDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.titluDataGridViewTextBoxColumn.Name = "titluDataGridViewTextBoxColumn";
+            this.titluDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descriereDataGridViewTextBoxColumn
+            // 
+            this.descriereDataGridViewTextBoxColumn.DataPropertyName = "descriere";
+            this.descriereDataGridViewTextBoxColumn.HeaderText = "descriere";
+            this.descriereDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descriereDataGridViewTextBoxColumn.Name = "descriereDataGridViewTextBoxColumn";
+            this.descriereDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // stocDataGridViewTextBoxColumn
+            // 
+            this.stocDataGridViewTextBoxColumn.DataPropertyName = "stoc";
+            this.stocDataGridViewTextBoxColumn.HeaderText = "stoc";
+            this.stocDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stocDataGridViewTextBoxColumn.Name = "stocDataGridViewTextBoxColumn";
+            this.stocDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataDataGridViewTextBoxColumn
+            // 
+            this.dataDataGridViewTextBoxColumn.DataPropertyName = "data";
+            this.dataDataGridViewTextBoxColumn.HeaderText = "data";
+            this.dataDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
+            this.dataDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // genDataGridViewTextBoxColumn
+            // 
+            this.genDataGridViewTextBoxColumn.DataPropertyName = "gen";
+            this.genDataGridViewTextBoxColumn.HeaderText = "gen";
+            this.genDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.genDataGridViewTextBoxColumn.Name = "genDataGridViewTextBoxColumn";
+            this.genDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // durataDataGridViewTextBoxColumn
+            // 
+            this.durataDataGridViewTextBoxColumn.DataPropertyName = "durata";
+            this.durataDataGridViewTextBoxColumn.HeaderText = "durata";
+            this.durataDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.durataDataGridViewTextBoxColumn.Name = "durataDataGridViewTextBoxColumn";
+            this.durataDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // LnkToHomepage
+            // 
+            this.LnkToHomepage.AutoSize = true;
+            this.LnkToHomepage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LnkToHomepage.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkToHomepage.LinkColor = System.Drawing.Color.MidnightBlue;
+            this.LnkToHomepage.Location = new System.Drawing.Point(127, 77);
+            this.LnkToHomepage.Name = "LnkToHomepage";
+            this.LnkToHomepage.Size = new System.Drawing.Size(53, 30);
+            this.LnkToHomepage.TabIndex = 20;
+            this.LnkToHomepage.TabStop = true;
+            this.LnkToHomepage.Text = "Back";
+            this.LnkToHomepage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkToHomepage_LinkClicked);
             // 
             // AdminInterfata
             // 
@@ -339,30 +371,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1382, 853);
+            this.Controls.Add(this.LnkToHomepage);
+            this.Controls.Add(this.filme_tblDataGridView);
             this.Controls.Add(this.LVFilme);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LbAdminEmail);
-            this.Controls.Add(this.DGFilme);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdminInterfata";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminInterfata";
             this.Load += new System.EventHandler(this.AdminInterfata_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGFilme)).EndInit();
             this.CMenuOperations.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.filmetblBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filme_dbDataSet)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filme_dbDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filme_tblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filme_tblDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView DGFilme;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem salvareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xMLToolStripMenuItem;
@@ -376,14 +407,6 @@
         private System.Windows.Forms.ToolStripMenuItem adaugaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editeazaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stergeToolStripMenuItem;
-        private filme_dbDataSet filme_dbDataSet;
-        private System.Windows.Forms.BindingSource filmetblBindingSource;
-        private filme_dbDataSetTableAdapters.filme_tblTableAdapter filme_tblTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idfilmDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titluDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriereDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stocDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genDataGridViewTextBoxColumn;
         private System.Windows.Forms.ListView LVFilme;
         private System.Windows.Forms.ColumnHeader id_film;
         private System.Windows.Forms.ColumnHeader titlu;
@@ -394,5 +417,18 @@
         private System.Windows.Forms.ToolStripMenuItem binarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem binarToolStripMenuItem1;
         private System.Windows.Forms.ColumnHeader durata;
+        private filme_dbDS filme_dbDS;
+        private System.Windows.Forms.BindingSource filme_tblBindingSource;
+        private filme_dbDSTableAdapters.filme_tblTableAdapter filme_tblTableAdapter;
+        private filme_dbDSTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView filme_tblDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idfilmDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titluDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriereDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stocDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn durataDataGridViewTextBoxColumn;
+        private System.Windows.Forms.LinkLabel LnkToHomepage;
     }
 }

@@ -34,6 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Admin = new System.Windows.Forms.Button();
+            this.BTNClient = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -94,7 +95,7 @@
             // Admin
             // 
             this.Admin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Admin.Location = new System.Drawing.Point(914, 464);
+            this.Admin.Location = new System.Drawing.Point(250, 456);
             this.Admin.Name = "Admin";
             this.Admin.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
             this.Admin.Size = new System.Drawing.Size(142, 56);
@@ -103,17 +104,31 @@
             this.Admin.UseVisualStyleBackColor = true;
             this.Admin.Click += new System.EventHandler(this.Admin_Click);
             // 
+            // BTNClient
+            // 
+            this.BTNClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTNClient.Location = new System.Drawing.Point(909, 464);
+            this.BTNClient.Name = "BTNClient";
+            this.BTNClient.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
+            this.BTNClient.Size = new System.Drawing.Size(142, 56);
+            this.BTNClient.TabIndex = 5;
+            this.BTNClient.Text = "Client";
+            this.BTNClient.UseVisualStyleBackColor = true;
+            this.BTNClient.Click += new System.EventHandler(this.BTNClient_Click);
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1382, 853);
+            this.Controls.Add(this.BTNClient);
             this.Controls.Add(this.Admin);
             this.Controls.Add(this.panel1);
             this.Name = "Homepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homepage";
+            this.Load += new System.EventHandler(this.Homepage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -129,6 +144,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Admin;
+        private System.Windows.Forms.Button BTNClient;
     }
 }
 

@@ -26,9 +26,9 @@ namespace Proiect
 
         private void LnkToHomepage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Homepage hp = new Homepage();
+/*            Homepage hp = new Homepage();
             hp.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
         private void CkBViewPassword_CheckedChanged(object sender, EventArgs e)

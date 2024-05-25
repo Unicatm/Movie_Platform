@@ -14,9 +14,11 @@ namespace Proiect
         [STAThread]
         static void Main()
         {
+            List<Film> filme = new List<Film>();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Homepage());
+            Application.Run(new Homepage(filme));
         }
+
     }
 }

@@ -16,15 +16,16 @@ namespace Proiect
 {
     public partial class AdminInterfata : Form
     {
-        string connName = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=filme_db;Integrated Security=True;";
+        string connName = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=test;Integrated Security=True";
 
         DataSet dsFilme = new DataSet();
 
-        private List<Film> listaFilme;
+        private List<Film> listaFilme = new List<Film>();
 
-        public AdminInterfata()
+        public AdminInterfata(List<Film> filme)
         {
             InitializeComponent();
+            listaFilme = filme;
             IncarcaDate();
         }
 
@@ -58,24 +59,25 @@ namespace Proiect
         }
         private void AdminInterfata_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'filme_dbDataSet.filme_tbl' table. You can move, or remove it, as needed.
-            //this.filme_tblTableAdapter.Fill(this.filme_dbDataSet.filme_tbl);
+
         }
 
         private void adaugareToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Film f = null;
             FilmForm fform = new FilmForm(f, LVFilme);
+            //ClientInterfata clform = new ClientInterfata();
 
             if (fform.ShowDialog() == DialogResult.OK)
             {
 
                 // filmul de aici va fi egal cu cel din formularul de adaugare si va prelua datele de acolo
                 f = fform.fSecundar;
-                ListViewItem lvi = new ListViewItem(new string[] { f.IdFilm.ToString(), f.Titlu, f.Descriere, f.Bucati.ToString(), f.AnLansare.ToString(),f.Gen, f.Durata.ToString() });
+                ListViewItem lvi = new ListViewItem(new string[] { f.IdFilm.ToString(), f.Titlu, f.Descriere, f.Bucati.ToString(), f.AnLansare.ToString(),f.Gen, f.Durata.ToString()});
                 lvi.Tag = f;
                 LVFilme.Items.Add(lvi);
-                //listaFilme.Add(f);
+                listaFilme.Add(fform.fSecundar);
+
             }
         }
 
@@ -257,6 +259,21 @@ namespace Proiect
                     LVFilme.Items.Add(lvi);
                 }
             }
+        }
+
+        private void filme_tblBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+/*            this.Validate();
+            this.filme_tblBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.filme_dbDS);*/
+
+        }
+
+        private void LnkToHomepage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Homepage hp = new Homepage(listaFilme);
+            hp.ShowDialog();
+            this.Hide();
         }
     }
 }

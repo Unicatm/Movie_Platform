@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.DTAn = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.CBGen = new System.Windows.Forms.ComboBox();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -56,12 +59,12 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.TBId = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.DTAn = new System.Windows.Forms.DateTimePicker();
             this.LbHeader = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.filme_dbDS = new Proiect.filme_dbDS();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel9.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -69,11 +72,12 @@
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filme_dbDS)).BeginInit();
             this.SuspendLayout();
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.button1);
             this.panel9.Controls.Add(this.panel12);
             this.panel9.Controls.Add(this.panel13);
             this.panel9.Controls.Add(this.panel11);
@@ -87,6 +91,35 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(490, 677);
             this.panel9.TabIndex = 47;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.DTAn);
+            this.panel12.Controls.Add(this.label5);
+            this.panel12.Location = new System.Drawing.Point(17, 519);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(234, 71);
+            this.panel12.TabIndex = 53;
+            // 
+            // DTAn
+            // 
+            this.DTAn.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTAn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTAn.Location = new System.Drawing.Point(3, 44);
+            this.DTAn.Name = "DTAn";
+            this.DTAn.Size = new System.Drawing.Size(227, 26);
+            this.DTAn.TabIndex = 49;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 30);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "An lansare";
             // 
             // panel13
             // 
@@ -347,26 +380,6 @@
             this.TBId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBId_KeyPress);
             this.TBId.Validating += new System.ComponentModel.CancelEventHandler(this.TBId_Validating);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 30);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "An lansare";
-            // 
-            // DTAn
-            // 
-            this.DTAn.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTAn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTAn.Location = new System.Drawing.Point(3, 44);
-            this.DTAn.Name = "DTAn";
-            this.DTAn.Size = new System.Drawing.Size(227, 26);
-            this.DTAn.TabIndex = 49;
-            // 
             // LbHeader
             // 
             this.LbHeader.AutoSize = true;
@@ -381,20 +394,29 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // panel12
+            // filme_dbDS
             // 
-            this.panel12.Controls.Add(this.DTAn);
-            this.panel12.Controls.Add(this.label5);
-            this.panel12.Location = new System.Drawing.Point(17, 519);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(234, 71);
-            this.panel12.TabIndex = 53;
+            this.filme_dbDS.DataSetName = "filme_dbDS";
+            this.filme_dbDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button1.Location = new System.Drawing.Point(256, 533);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
+            this.button1.Size = new System.Drawing.Size(217, 56);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Adauga Imagine";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FilmForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 853);
+            this.ClientSize = new System.Drawing.Size(784, 853);
             this.Controls.Add(this.LbHeader);
             this.Controls.Add(this.panel9);
             this.Name = "FilmForm";
@@ -402,6 +424,8 @@
             this.Text = "FilmForm";
             this.Load += new System.EventHandler(this.FilmForm_Load);
             this.panel9.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -415,8 +439,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filme_dbDS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,5 +479,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
+        private filme_dbDS filme_dbDS;
+        private System.Windows.Forms.Button button1;
     }
 }

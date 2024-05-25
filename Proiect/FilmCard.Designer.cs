@@ -39,7 +39,7 @@
             // 
             this.LBTitlu.AutoSize = true;
             this.LBTitlu.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBTitlu.Location = new System.Drawing.Point(259, 22);
+            this.LBTitlu.Location = new System.Drawing.Point(203, 22);
             this.LBTitlu.Name = "LBTitlu";
             this.LBTitlu.Size = new System.Drawing.Size(61, 36);
             this.LBTitlu.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             this.LBDescriere.AutoSize = true;
             this.LBDescriere.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBDescriere.Location = new System.Drawing.Point(259, 74);
+            this.LBDescriere.Location = new System.Drawing.Point(205, 68);
             this.LBDescriere.Name = "LBDescriere";
             this.LBDescriere.Size = new System.Drawing.Size(71, 23);
             this.LBDescriere.TabIndex = 1;
@@ -58,9 +58,9 @@
             // BtnRezerva
             // 
             this.BtnRezerva.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRezerva.Location = new System.Drawing.Point(259, 226);
+            this.BtnRezerva.Location = new System.Drawing.Point(197, 167);
             this.BtnRezerva.Name = "BtnRezerva";
-            this.BtnRezerva.Size = new System.Drawing.Size(241, 35);
+            this.BtnRezerva.Size = new System.Drawing.Size(157, 35);
             this.BtnRezerva.TabIndex = 2;
             this.BtnRezerva.Text = "Rezerva";
             this.BtnRezerva.UseVisualStyleBackColor = true;
@@ -69,20 +69,23 @@
             // 
             this.PBImage.Location = new System.Drawing.Point(27, 22);
             this.PBImage.Name = "PBImage";
-            this.PBImage.Size = new System.Drawing.Size(208, 239);
+            this.PBImage.Size = new System.Drawing.Size(143, 180);
             this.PBImage.TabIndex = 3;
             this.PBImage.TabStop = false;
+            this.PBImage.Click += new System.EventHandler(this.PBImage_Click);
             // 
             // FilmCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.PBImage);
             this.Controls.Add(this.BtnRezerva);
             this.Controls.Add(this.LBDescriere);
             this.Controls.Add(this.LBTitlu);
             this.Name = "FilmCard";
-            this.Size = new System.Drawing.Size(536, 288);
+            this.Size = new System.Drawing.Size(376, 219);
+            this.Load += new System.EventHandler(this.FilmCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

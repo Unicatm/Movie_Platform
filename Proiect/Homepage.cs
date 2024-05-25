@@ -12,30 +12,46 @@ namespace Proiect
 {
     public partial class Homepage : Form
     {
-        public Homepage()
+
+        private List<Film> _filme = new List<Film>();
+
+        public Homepage(List<Film> filme)
         {
             InitializeComponent();
+            _filme = filme;
         }
 
         private void BtnLogIn_Click(object sender, EventArgs e)
         {
             LogIn logIn = new LogIn();
-            logIn.Show();
+            logIn.ShowDialog();
             this.Hide();
         }
 
         private void BtnSignUp_Click(object sender, EventArgs e)
         {
             SignUp signUp = new SignUp();
-            signUp.Show();
+            signUp.ShowDialog();
             this.Hide();
         }
 
         private void Admin_Click(object sender, EventArgs e)
         {
-            AdminInterfata admin = new AdminInterfata();
-            admin.Show();
+            AdminInterfata admin = new AdminInterfata(_filme);
+            admin.ShowDialog();
             this.Hide();
+        }
+
+        private void BTNClient_Click(object sender, EventArgs e)
+        {
+            ClientInterfata client = new ClientInterfata(_filme);
+            client.ShowDialog();
+            this.Hide();
+        }
+
+        private void Homepage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

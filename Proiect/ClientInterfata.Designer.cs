@@ -38,7 +38,10 @@
             this.binarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.filmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adaugareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FlowLayoutFilmeClient = new System.Windows.Forms.FlowLayoutPanel();
+            this.filmCard1 = new Proiect.FilmCard();
             this.menuStrip1.SuspendLayout();
+            this.FlowLayoutFilmeClient.SuspendLayout();
             this.SuspendLayout();
             // 
             // LbAdminEmail
@@ -81,13 +84,13 @@
             // xMLToolStripMenuItem
             // 
             this.xMLToolStripMenuItem.Name = "xMLToolStripMenuItem";
-            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(133, 28);
             this.xMLToolStripMenuItem.Text = "XML";
             // 
             // binarToolStripMenuItem
             // 
             this.binarToolStripMenuItem.Name = "binarToolStripMenuItem";
-            this.binarToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.binarToolStripMenuItem.Size = new System.Drawing.Size(133, 28);
             this.binarToolStripMenuItem.Text = "Binar";
             // 
             // restaurareToolStripMenuItem
@@ -126,20 +129,39 @@
             // adaugareToolStripMenuItem
             // 
             this.adaugareToolStripMenuItem.Name = "adaugareToolStripMenuItem";
-            this.adaugareToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.adaugareToolStripMenuItem.Size = new System.Drawing.Size(168, 28);
             this.adaugareToolStripMenuItem.Text = "Adaugare";
+            // 
+            // FlowLayoutFilmeClient
+            // 
+            this.FlowLayoutFilmeClient.Controls.Add(this.filmCard1);
+            this.FlowLayoutFilmeClient.Location = new System.Drawing.Point(35, 96);
+            this.FlowLayoutFilmeClient.Name = "FlowLayoutFilmeClient";
+            this.FlowLayoutFilmeClient.Size = new System.Drawing.Size(1313, 733);
+            this.FlowLayoutFilmeClient.TabIndex = 5;
+            // 
+            // filmCard1
+            // 
+            this.filmCard1.BackColor = System.Drawing.Color.White;
+            this.filmCard1.Location = new System.Drawing.Point(3, 3);
+            this.filmCard1.Name = "filmCard1";
+            this.filmCard1.Size = new System.Drawing.Size(376, 219);
+            this.filmCard1.TabIndex = 0;
             // 
             // ClientInterfata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1382, 853);
+            this.Controls.Add(this.FlowLayoutFilmeClient);
             this.Controls.Add(this.LbAdminEmail);
             this.Controls.Add(this.menuStrip1);
             this.Name = "ClientInterfata";
             this.Text = "ClientInterfata";
+            this.Load += new System.EventHandler(this.ClientInterfata_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.FlowLayoutFilmeClient.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +179,7 @@
         private System.Windows.Forms.ToolStripMenuItem binarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem filmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adaugareToolStripMenuItem;
+        private System.Windows.Forms.FlowLayoutPanel FlowLayoutFilmeClient;
+        private FilmCard filmCard1;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace Proiect
         private DateTime anLansare;
         private int durata;
         private string gen;
+        private string imgSRC; 
 
         public int IdFilm {  get { return idFilm; } set {  idFilm = value; } }
         public string Titlu { get {  return titlu; } set {  titlu = value; } }
@@ -27,5 +29,7 @@ namespace Proiect
         public DateTime AnLansare { get {  return anLansare; } set {  anLansare = value; } }
         public int Durata { get { return durata; } set {  durata = value; } }   
         public string Gen { get { return gen; } set { gen = value; } }
+
+        public string ImgSRC {  get { return imgSRC; } set {  imgSRC = value; } }
     }
 }

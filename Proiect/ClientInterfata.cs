@@ -12,9 +12,28 @@ namespace Proiect
 {
     public partial class ClientInterfata : Form
     {
-        public ClientInterfata()
+
+        private List<Film> _filme = new List<Film>();
+        public ClientInterfata(List<Film> filme)
         {
             InitializeComponent();
+            _filme = filme;
+            PopuleazaFilme();
+        }
+
+        private void PopuleazaFilme()
+        {
+            FlowLayoutFilmeClient.Controls.Clear();
+            foreach (Film film in _filme)
+            {
+                FilmCard filmControl = new FilmCard(film);
+                FlowLayoutFilmeClient.Controls.Add(filmControl);
+            }
+        }
+
+        private void ClientInterfata_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
