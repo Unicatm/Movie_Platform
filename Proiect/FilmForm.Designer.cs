@@ -61,7 +61,7 @@
             this.TBId = new System.Windows.Forms.TextBox();
             this.LbHeader = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.filme_dbDS = new Proiect.filme_dbDS();
+            //dthis.filme_dbDS = new Proiect.filme_dbDS();
             this.button1 = new System.Windows.Forms.Button();
             this.panel9.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -72,7 +72,7 @@
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filme_dbDS)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.filme_dbDS)).BeginInit();
             this.SuspendLayout();
             // 
             // panel9
@@ -396,8 +396,8 @@
             // 
             // filme_dbDS
             // 
-            this.filme_dbDS.DataSetName = "filme_dbDS";
-            this.filme_dbDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.filme_dbDS.DataSetName = "filme_dbDS";
+            //this.filme_dbDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -439,7 +439,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filme_dbDS)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.filme_dbDS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,7 +479,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
-        private filme_dbDS filme_dbDS;
+        //private filme_dbDS filme_dbDS;
         private System.Windows.Forms.Button button1;
     }
 }

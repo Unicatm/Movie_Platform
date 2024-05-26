@@ -40,6 +40,7 @@
             this.adaugareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FlowLayoutFilmeClient = new System.Windows.Forms.FlowLayoutPanel();
             this.filmCard1 = new Proiect.FilmCard();
+            this.LnkToHomepage = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.FlowLayoutFilmeClient.SuspendLayout();
             this.SuspendLayout();
@@ -134,11 +135,13 @@
             // 
             // FlowLayoutFilmeClient
             // 
+            this.FlowLayoutFilmeClient.AutoScroll = true;
             this.FlowLayoutFilmeClient.Controls.Add(this.filmCard1);
             this.FlowLayoutFilmeClient.Location = new System.Drawing.Point(35, 96);
             this.FlowLayoutFilmeClient.Name = "FlowLayoutFilmeClient";
             this.FlowLayoutFilmeClient.Size = new System.Drawing.Size(1313, 733);
             this.FlowLayoutFilmeClient.TabIndex = 5;
+            this.FlowLayoutFilmeClient.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayoutFilmeClient_Paint);
             // 
             // filmCard1
             // 
@@ -148,12 +151,27 @@
             this.filmCard1.Size = new System.Drawing.Size(376, 219);
             this.filmCard1.TabIndex = 0;
             // 
+            // LnkToHomepage
+            // 
+            this.LnkToHomepage.AutoSize = true;
+            this.LnkToHomepage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LnkToHomepage.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkToHomepage.LinkColor = System.Drawing.Color.MidnightBlue;
+            this.LnkToHomepage.Location = new System.Drawing.Point(33, 63);
+            this.LnkToHomepage.Name = "LnkToHomepage";
+            this.LnkToHomepage.Size = new System.Drawing.Size(53, 30);
+            this.LnkToHomepage.TabIndex = 21;
+            this.LnkToHomepage.TabStop = true;
+            this.LnkToHomepage.Text = "Back";
+            this.LnkToHomepage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkToHomepage_LinkClicked);
+            // 
             // ClientInterfata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1382, 853);
             this.Controls.Add(this.FlowLayoutFilmeClient);
+            this.Controls.Add(this.LnkToHomepage);
             this.Controls.Add(this.LbAdminEmail);
             this.Controls.Add(this.menuStrip1);
             this.Name = "ClientInterfata";
@@ -181,5 +199,6 @@
         private System.Windows.Forms.ToolStripMenuItem adaugareToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel FlowLayoutFilmeClient;
         private FilmCard filmCard1;
+        private System.Windows.Forms.LinkLabel LnkToHomepage;
     }
 }

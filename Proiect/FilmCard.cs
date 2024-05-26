@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Proiect
 {
     public partial class FilmCard : UserControl
     {
+        private ClientInterfata interfataCl;
+        Film _film = new Film();
         public FilmCard()
         {
             InitializeComponent();
@@ -19,12 +22,14 @@ namespace Proiect
             LBDescriere.Text = "Alt ceva";
         }
 
-        public FilmCard(Film f)
+        public FilmCard(Film f, ClientInterfata ci)
         {
             InitializeComponent();
             LBTitlu.Text = f.Titlu;
             LBDescriere.Text = f.Descriere;
-            PBImage.Image = new Bitmap(f.ImgSRC);
+            _film = f;
+            interfataCl = ci;
+            //PBImage.Image = new Bitmap(f.ImgSRC);
         }
 
         
@@ -37,6 +42,11 @@ namespace Proiect
         private void PBImage_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnRezerva_Click(object sender, EventArgs e)
+        {
+            interfataCl.FilmControl_RezervareFilm(_film);
         }
     }
 }

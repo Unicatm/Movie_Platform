@@ -89,15 +89,10 @@
     <Compile Include="FilmCard.Designer.cs">
       <DependentUpon>FilmCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="filme_dbDataSet.Designer.cs">
+    <Compile Include="filmeDataSetF.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>filme_dbDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="filme_dbDS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>filme_dbDS.xsd</DependentUpon>
+      <DependentUpon>filmeDataSetF.xsd</DependentUpon>
     </Compile>
     <Compile Include="FilmForm.cs">
       <SubType>Form</SubType>
@@ -168,27 +163,16 @@
     <EmbeddedResource Include="InputField.resx">
       <DependentUpon>InputField.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="filme_dbDataSet.xsc">
-      <DependentUpon>filme_dbDataSet.xsd</DependentUpon>
+    <None Include="filmeDataSetF.xsc">
+      <DependentUpon>filmeDataSetF.xsd</DependentUpon>
     </None>
-    <None Include="filme_dbDataSet.xsd">
+    <None Include="filmeDataSetF.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>filme_dbDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>filmeDataSetF.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="filme_dbDataSet.xss">
-      <DependentUpon>filme_dbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="filme_dbDS.xsc">
-      <DependentUpon>filme_dbDS.xsd</DependentUpon>
-    </None>
-    <None Include="filme_dbDS.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>filme_dbDS.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="filme_dbDS.xss">
-      <DependentUpon>filme_dbDS.xsd</DependentUpon>
+    <None Include="filmeDataSetF.xss">
+      <DependentUpon>filmeDataSetF.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -214,15 +198,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="filme_db.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="filme_db_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>filme_db.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

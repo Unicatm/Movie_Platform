@@ -64,6 +64,7 @@
             this.BtnRezerva.TabIndex = 2;
             this.BtnRezerva.Text = "Rezerva";
             this.BtnRezerva.UseVisualStyleBackColor = true;
+            this.BtnRezerva.Click += new System.EventHandler(this.BtnRezerva_Click);
             // 
             // PBImage
             // 

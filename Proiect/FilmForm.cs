@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -13,6 +15,7 @@ namespace Proiect
 {
     public partial class FilmForm : Form
     {
+        string connName = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=filme;Integrated Security=True";
         public Film fSecundar;
         private ListView lvSec;
         public FilmForm(Film f, ListView lv)
@@ -23,12 +26,14 @@ namespace Proiect
                 f = new Film();
                 BtnAdauga.Text = "Adauga";
                 LbHeader.Text = "Adauga un nou film";
+                TBId.ReadOnly = false;
             }
             else
             {
                 BtnAdauga.Text = "Modifica";
                 LbHeader.Text = "Editeaza filmul";
                 TBId.Text = f.IdFilm.ToString();
+                TBId.ReadOnly = true;
                 TbTitle.Text = f.Titlu;
                 TBDescr.Text = f.Descriere;
                 TBStoc.Text = f.Bucati.ToString();
@@ -46,6 +51,7 @@ namespace Proiect
 
         private void FilmForm_Load(object sender, EventArgs e)
         {
+            CBGen.SelectedIndex = 0;
             // TODO: This line of code loads data into the 'filme_dbDS.filme_tbl' table. You can move, or remove it, as needed.
             //this.filme_tblTableAdapter.Fill(this.filme_dbDS.filme_tbl);
 
@@ -60,7 +66,6 @@ namespace Proiect
             fSecundar.AnLansare = DTAn.Value;
             fSecundar.Gen = CBGen.SelectedItem.ToString();
             fSecundar.Durata = Convert.ToInt32(TBDurata.Text);
-
         }
 
         private void TBId_KeyPress(object sender, KeyPressEventArgs e)
@@ -79,18 +84,46 @@ namespace Proiect
 
         private void TBId_Validating(object sender, CancelEventArgs e)
         {
-            foreach (ListViewItem lvi in lvSec.Items)
+            if (BtnAdauga.Text == "Adauga")
             {
-                if (lvi.SubItems[0].Text == TBId.Text)
+                using (SqlConnection connection = new SqlConnection(connName))
                 {
-                    errorProvider1.SetError(TBId, "Id-ul exista!");
-                    BtnAdauga.Enabled = false;
-                }
-                else
-                {
-                    errorProvider1.SetError(TBId, "");
-                    BtnAdauga.Enabled = true;
+                    connection.Open();
 
+                    string checkQuery = "SELECT COUNT(*) FROM filme_tbl WHERE id_film = @IdFilm";
+
+                    using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection))
+                    {
+                        checkCommand.Parameters.AddWithValue("@IdFilm", TBId.Text);
+                        int count = (int)checkCommand.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            errorProvider1.SetError(TBId, "Id-ul exista!");
+                            BtnAdauga.Enabled = false;
+                        }
+                        else
+                        {
+                            errorProvider1.SetError(TBId, "");
+                            BtnAdauga.Enabled = true;
+                        }
+
+                    }
+
+                    /*foreach (ListViewItem lvi in lvSec.Items)
+                    {
+                        if (lvi.SubItems[0].Text == TBId.Text)
+                        {
+                            errorProvider1.SetError(TBId, "Id-ul exista!");
+                            BtnAdauga.Enabled = false;
+                        }
+                        else
+                        {
+                            errorProvider1.SetError(TBId, "");
+                            BtnAdauga.Enabled = true;
+
+                        }
+                    }*/
                 }
             }
         }

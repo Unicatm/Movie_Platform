@@ -22,6 +22,15 @@ namespace Proiect
         private string gen;
         private string imgSRC; 
 
+        public Film() { }
+
+        public Film(string titlu, string descriere, DateTime anLansare)
+        {
+            Titlu = titlu;
+            Descriere = descriere;
+            AnLansare = anLansare;
+        }
+
         public int IdFilm {  get { return idFilm; } set {  idFilm = value; } }
         public string Titlu { get {  return titlu; } set {  titlu = value; } }
         public string Descriere { get {  return descriere; } set {  descriere = value; } }

@@ -12,7 +12,7 @@ namespace Proiect
 {
     public partial class Homepage : Form
     {
-
+        private AdminInterfata _adminForm;
         private List<Film> _filme = new List<Film>();
 
         public Homepage(List<Film> filme)
@@ -39,14 +39,14 @@ namespace Proiect
         {
             AdminInterfata admin = new AdminInterfata(_filme);
             admin.ShowDialog();
-            this.Hide();
+            this.Close();
         }
 
         private void BTNClient_Click(object sender, EventArgs e)
         {
-            ClientInterfata client = new ClientInterfata(_filme);
+            ClientInterfata client = new ClientInterfata(_adminForm);
             client.ShowDialog();
-            this.Hide();
+            this.Close();
         }
 
         private void Homepage_Load(object sender, EventArgs e)
