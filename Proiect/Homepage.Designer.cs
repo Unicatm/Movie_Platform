@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             this.label1 = new System.Windows.Forms.Label();
             this.BtnLogIn = new System.Windows.Forms.Button();
             this.BtnSignUp = new System.Windows.Forms.Button();
@@ -43,11 +42,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(17, 13);
+            this.label1.Font = new System.Drawing.Font("Poppins ExtraBold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Crimson;
+            this.label1.Location = new System.Drawing.Point(20, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(380, 106);
+            this.label1.Size = new System.Drawing.Size(516, 141);
             this.label1.TabIndex = 0;
             this.label1.Text = "FilmFusion";
             // 
@@ -78,41 +77,50 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(453, 148);
+            this.panel1.Controls.Add(this.BTNClient);
+            this.panel1.Controls.Add(this.Admin);
+            this.panel1.Location = new System.Drawing.Point(398, 148);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(416, 389);
+            this.panel1.Size = new System.Drawing.Size(556, 389);
             this.panel1.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.BtnSignUp);
             this.panel2.Controls.Add(this.BtnLogIn);
-            this.panel2.Location = new System.Drawing.Point(38, 301);
+            this.panel2.Location = new System.Drawing.Point(511, 71);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(339, 71);
             this.panel2.TabIndex = 3;
             // 
             // Admin
             // 
+            this.Admin.BackColor = System.Drawing.Color.Crimson;
             this.Admin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Admin.Location = new System.Drawing.Point(250, 456);
+            this.Admin.FlatAppearance.BorderSize = 0;
+            this.Admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Admin.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admin.ForeColor = System.Drawing.Color.White;
+            this.Admin.Location = new System.Drawing.Point(20, 316);
             this.Admin.Name = "Admin";
             this.Admin.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
-            this.Admin.Size = new System.Drawing.Size(142, 56);
+            this.Admin.Size = new System.Drawing.Size(244, 56);
             this.Admin.TabIndex = 4;
             this.Admin.Text = "Admin";
-            this.Admin.UseVisualStyleBackColor = true;
+            this.Admin.UseVisualStyleBackColor = false;
             this.Admin.Click += new System.EventHandler(this.Admin_Click);
             // 
             // BTNClient
             // 
             this.BTNClient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTNClient.Location = new System.Drawing.Point(909, 464);
+            this.BTNClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNClient.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNClient.ForeColor = System.Drawing.Color.Crimson;
+            this.BTNClient.Location = new System.Drawing.Point(284, 316);
             this.BTNClient.Name = "BTNClient";
             this.BTNClient.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
-            this.BTNClient.Size = new System.Drawing.Size(142, 56);
+            this.BTNClient.Size = new System.Drawing.Size(252, 56);
             this.BTNClient.TabIndex = 5;
             this.BTNClient.Text = "Client";
             this.BTNClient.UseVisualStyleBackColor = true;
@@ -123,11 +131,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1382, 853);
-            this.Controls.Add(this.BTNClient);
-            this.Controls.Add(this.Admin);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Homepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

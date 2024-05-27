@@ -40,10 +40,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.TBPhoneNumber = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.Line = new System.Windows.Forms.Panel();
-            this.LblInputReg = new System.Windows.Forms.Label();
-            this.TxtBCNP = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.inputField5 = new Proiect.InputField();
@@ -52,7 +48,6 @@
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -146,7 +141,6 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.inputField2);
@@ -197,47 +191,6 @@
             this.TBPhoneNumber.Size = new System.Drawing.Size(450, 40);
             this.TBPhoneNumber.TabIndex = 28;
             this.TBPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBPhoneNumber_KeyPress);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.Line);
-            this.panel4.Controls.Add(this.LblInputReg);
-            this.panel4.Controls.Add(this.TxtBCNP);
-            this.panel4.Location = new System.Drawing.Point(17, 306);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(457, 84);
-            this.panel4.TabIndex = 35;
-            // 
-            // Line
-            // 
-            this.Line.BackColor = System.Drawing.Color.MidnightBlue;
-            this.Line.Location = new System.Drawing.Point(3, 76);
-            this.Line.Name = "Line";
-            this.Line.Size = new System.Drawing.Size(450, 1);
-            this.Line.TabIndex = 28;
-            // 
-            // LblInputReg
-            // 
-            this.LblInputReg.AutoSize = true;
-            this.LblInputReg.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblInputReg.Location = new System.Drawing.Point(3, 0);
-            this.LblInputReg.Name = "LblInputReg";
-            this.LblInputReg.Size = new System.Drawing.Size(50, 30);
-            this.LblInputReg.TabIndex = 29;
-            this.LblInputReg.Text = "CNP";
-            // 
-            // TxtBCNP
-            // 
-            this.TxtBCNP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBCNP.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBCNP.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.TxtBCNP.Location = new System.Drawing.Point(3, 33);
-            this.TxtBCNP.Multiline = true;
-            this.TxtBCNP.Name = "TxtBCNP";
-            this.TxtBCNP.Size = new System.Drawing.Size(450, 40);
-            this.TxtBCNP.TabIndex = 28;
-            this.TxtBCNP.TextChanged += new System.EventHandler(this.TxtBCNP_TextChanged);
-            this.TxtBCNP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBCNP_KeyPress);
             // 
             // panel2
             // 
@@ -305,8 +258,6 @@
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -330,10 +281,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label LblInputReg;
-        private System.Windows.Forms.TextBox TxtBCNP;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel Line;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label2;

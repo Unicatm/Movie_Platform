@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.DTAn = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,8 +62,6 @@
             this.TBId = new System.Windows.Forms.TextBox();
             this.LbHeader = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            //dthis.filme_dbDS = new Proiect.filme_dbDS();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel9.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -72,7 +71,6 @@
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.filme_dbDS)).BeginInit();
             this.SuspendLayout();
             // 
             // panel9
@@ -91,6 +89,19 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(490, 677);
             this.panel9.TabIndex = 47;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button1.Location = new System.Drawing.Point(256, 533);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
+            this.button1.Size = new System.Drawing.Size(217, 56);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Adauga Imagine";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel12
             // 
@@ -115,6 +126,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Crimson;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 30);
@@ -143,7 +155,7 @@
             // 
             // panel14
             // 
-            this.panel14.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel14.BackColor = System.Drawing.Color.Crimson;
             this.panel14.Location = new System.Drawing.Point(5, 77);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(279, 1);
@@ -153,6 +165,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Crimson;
             this.label7.Location = new System.Drawing.Point(5, 1);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 30);
@@ -171,7 +184,7 @@
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel10.BackColor = System.Drawing.Color.Crimson;
             this.panel10.Location = new System.Drawing.Point(5, 77);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(225, 1);
@@ -193,6 +206,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Crimson;
             this.label6.Location = new System.Drawing.Point(5, 1);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 30);
@@ -203,6 +217,9 @@
             // 
             this.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancel.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancel.ForeColor = System.Drawing.Color.Crimson;
             this.BtnCancel.Location = new System.Drawing.Point(256, 599);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
@@ -213,15 +230,19 @@
             // 
             // BtnAdauga
             // 
+            this.BtnAdauga.BackColor = System.Drawing.Color.Crimson;
             this.BtnAdauga.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnAdauga.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BtnAdauga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdauga.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdauga.ForeColor = System.Drawing.Color.White;
             this.BtnAdauga.Location = new System.Drawing.Point(17, 599);
             this.BtnAdauga.Name = "BtnAdauga";
             this.BtnAdauga.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
             this.BtnAdauga.Size = new System.Drawing.Size(217, 56);
             this.BtnAdauga.TabIndex = 42;
             this.BtnAdauga.Text = "Adauga";
-            this.BtnAdauga.UseVisualStyleBackColor = true;
+            this.BtnAdauga.UseVisualStyleBackColor = false;
             this.BtnAdauga.Click += new System.EventHandler(this.BtnAdauga_Click);
             // 
             // panel6
@@ -236,7 +257,7 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel8.BackColor = System.Drawing.Color.Crimson;
             this.panel8.Location = new System.Drawing.Point(3, 76);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(450, 1);
@@ -246,6 +267,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Crimson;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 30);
@@ -276,7 +298,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel3.BackColor = System.Drawing.Color.Crimson;
             this.panel3.Location = new System.Drawing.Point(3, 127);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(450, 1);
@@ -286,6 +308,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Crimson;
             this.label3.Location = new System.Drawing.Point(3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 30);
@@ -312,7 +335,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.BackColor = System.Drawing.Color.Crimson;
             this.panel2.Location = new System.Drawing.Point(3, 76);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 1);
@@ -322,6 +345,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Crimson;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 30);
@@ -351,7 +375,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel7.BackColor = System.Drawing.Color.Crimson;
             this.panel7.Location = new System.Drawing.Point(3, 76);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(450, 1);
@@ -361,6 +385,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Crimson;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 30);
@@ -384,6 +409,7 @@
             // 
             this.LbHeader.AutoSize = true;
             this.LbHeader.Font = new System.Drawing.Font("Poppins", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbHeader.ForeColor = System.Drawing.Color.Crimson;
             this.LbHeader.Location = new System.Drawing.Point(291, 68);
             this.LbHeader.Name = "LbHeader";
             this.LbHeader.Size = new System.Drawing.Size(200, 50);
@@ -394,28 +420,11 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // filme_dbDS
-            // 
-            //this.filme_dbDS.DataSetName = "filme_dbDS";
-            //this.filme_dbDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(256, 533);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
-            this.button1.Size = new System.Drawing.Size(217, 56);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Adauga Imagine";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FilmForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(784, 853);
             this.Controls.Add(this.LbHeader);
             this.Controls.Add(this.panel9);
@@ -439,7 +448,6 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.filme_dbDS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

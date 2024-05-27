@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Proiect
 {
     public partial class LogIn : Form
     {
+        string connName = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=filme;Integrated Security=True";
         public LogIn()
         {
             InitializeComponent();
@@ -44,11 +46,41 @@ namespace Proiect
         private void CkBViewPassword_CheckedChanged(object sender, EventArgs e)
         {
             if(CkBViewPassword.Checked == true) {
-                inputField5.PasswordCharType = '\0';
+                CPassword.PasswordCharType = '\0';
             }
             else
             {
-                inputField5.PasswordCharType = '*';
+                CPassword.PasswordCharType = '*';
+            }
+        }
+
+        private void BtnSignUp_Click(object sender, EventArgs e)
+        {
+            string email = CEmail.TBInput.Text;
+            string password = CPassword.TBInput.Text;
+
+
+            try
+            {
+                string querry = "SELECT * FROM clienti_tbl WHERE email='" + CEmail.TBInput.Text + "' AND password='" + CPassword.TBInput.Text+"' ";
+                SqlDataAdapter adapter = new SqlDataAdapter(querry, connName);
+
+                DataTable dTable = new DataTable();
+                adapter.Fill(dTable);
+
+                if(dTable.Rows.Count > 0) { 
+                    ClientInterfata clInterface = new ClientInterfata();
+                    clInterface.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect email or password! Try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Login!");
             }
         }
     }

@@ -27,6 +27,11 @@ namespace Proiect
 
         }
 
+        public TextBox TBInput
+        {
+            get{ return TxtBInputReg; }
+        }
+
         #region Properties
 
         private string title;

@@ -17,8 +17,8 @@ namespace Proiect
     {
         string connName = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=filme;Integrated Security=True";
         public Film fSecundar;
-        private ListView lvSec;
-        public FilmForm(Film f, ListView lv)
+        //private ListView lvSec;
+        public FilmForm(Film f)
         {
             InitializeComponent();
             if(f == null)
@@ -41,7 +41,7 @@ namespace Proiect
                 TBDurata.Text = f.Durata.ToString();
             }
             fSecundar = f;
-            lvSec = lv;
+            //lvSec = lv;
             var genValueLits = Enum.GetValues(typeof(Gen));
             foreach (Gen unGen in genValueLits)
             {

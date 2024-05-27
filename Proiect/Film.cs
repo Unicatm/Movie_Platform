@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Proiect
 {
-    [Serializable]
 
     public enum Gen { Actiune, Fantasy, Politist };
+
+    [Serializable]
     public class Film
     {
 

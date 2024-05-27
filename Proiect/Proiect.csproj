@@ -89,6 +89,9 @@
     <Compile Include="FilmCard.Designer.cs">
       <DependentUpon>FilmCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="filmeDataSetF.cs">
+      <DependentUpon>filmeDataSetF.xsd</DependentUpon>
+    </Compile>
     <Compile Include="filmeDataSetF.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

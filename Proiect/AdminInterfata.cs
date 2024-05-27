@@ -27,6 +27,8 @@ namespace Proiect
         {
             InitializeComponent();
             listaFilme = filme;
+            filme_tblDataGridView.Columns[0].Visible = false;
+            filme_tblDataGridView.Columns[6].Visible = false;
             IncarcaDate();
         }
 
@@ -56,7 +58,7 @@ namespace Proiect
         private void adaugareToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Film f = null;
-            FilmForm fform = new FilmForm(f, LVFilme);
+            FilmForm fform = new FilmForm(f);
             //ClientInterfata clform = new ClientInterfata();
 
             if (fform.ShowDialog() == DialogResult.OK)
@@ -64,9 +66,9 @@ namespace Proiect
 
                 // filmul de aici va fi egal cu cel din formularul de adaugare si va prelua datele de acolo
                 f = fform.fSecundar;
-                ListViewItem lvi = new ListViewItem(new string[] { f.IdFilm.ToString(), f.Titlu, f.Descriere, f.Bucati.ToString(), f.AnLansare.ToString(),f.Gen, f.Durata.ToString()});
+                /*ListViewItem lvi = new ListViewItem(new string[] { f.IdFilm.ToString(), f.Titlu, f.Descriere, f.Bucati.ToString(), f.AnLansare.ToString(),f.Gen, f.Durata.ToString()});
                 lvi.Tag = f;
-                LVFilme.Items.Add(lvi);
+                LVFilme.Items.Add(lvi);*/
                 listaFilme.Add(fform.fSecundar);
 
                 using (SqlConnection connection = new SqlConnection(connName))
@@ -100,7 +102,7 @@ namespace Proiect
 
         private void CMenuOperations_Opening(object sender, CancelEventArgs e)
         {
-            if(LVFilme.SelectedItems.Count > 0 || filme_tblDataGridView.SelectedRows.Count > 0)
+            if( filme_tblDataGridView.SelectedRows.Count > 0)
             {
                 adaugareToolStripMenuItem.Enabled = false;
                 editeazaToolStripMenuItem.Enabled = true;
@@ -130,7 +132,7 @@ namespace Proiect
                 f.Gen = filme_tblDataGridView.Rows[selectedRowIndex].Cells[4].Value.ToString();
                 f.Bucati = Convert.ToInt32(filme_tblDataGridView.Rows[selectedRowIndex].Cells[5].Value);
 
-                FilmForm form = new FilmForm(f, LVFilme);
+                FilmForm form = new FilmForm(f);
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     using (SqlConnection connection = new SqlConnection(connName))
@@ -156,11 +158,11 @@ namespace Proiect
                 }
             }
 
-            if (LVFilme.SelectedItems.Count > 0)
+            /*if (LVFilme.SelectedItems.Count > 0)
             {
                 Film f = LVFilme.SelectedItems[0].Tag as Film;
 
-                FilmForm form = new FilmForm(f, LVFilme);
+                FilmForm form = new FilmForm(f);
                 if(form.ShowDialog() == DialogResult.OK)
                 {
                     ListViewItem lvi = LVFilme.SelectedItems[0] as ListViewItem;
@@ -172,7 +174,7 @@ namespace Proiect
                     lvi.SubItems[5].Text = f.Gen;
                     lvi.SubItems[6].Text = f.Durata.ToString();
                 }
-            }
+            }*/
         }
 
         private void adaugaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -469,6 +471,21 @@ namespace Proiect
         private void filme_tblDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void salvareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            adaugareToolStripMenuItem_Click(sender, e);
         }
     }
 }

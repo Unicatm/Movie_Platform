@@ -34,12 +34,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.LkLblLogIn = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CPassword = new Proiect.InputField();
             this.CkBViewPassword = new System.Windows.Forms.CheckBox();
+            this.CEmail = new Proiect.InputField();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnSignUp = new System.Windows.Forms.Button();
             this.LnkToHomepage = new System.Windows.Forms.LinkLabel();
-            this.inputField5 = new Proiect.InputField();
-            this.inputField2 = new Proiect.InputField();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,7 +61,7 @@
             // 
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.panel1);
-            this.panel3.Controls.Add(this.inputField2);
+            this.panel3.Controls.Add(this.CEmail);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.BtnSignUp);
             this.panel3.Location = new System.Drawing.Point(59, 174);
@@ -106,12 +106,23 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.inputField5);
+            this.panel1.Controls.Add(this.CPassword);
             this.panel1.Controls.Add(this.CkBViewPassword);
             this.panel1.Location = new System.Drawing.Point(18, 238);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 111);
             this.panel1.TabIndex = 33;
+            // 
+            // CPassword
+            // 
+            this.CPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CPassword.BackColor = System.Drawing.Color.Transparent;
+            this.CPassword.Location = new System.Drawing.Point(0, 3);
+            this.CPassword.Name = "CPassword";
+            this.CPassword.PasswordCharType = '*';
+            this.CPassword.Size = new System.Drawing.Size(450, 82);
+            this.CPassword.TabIndex = 32;
+            this.CPassword.Title = "Password";
             // 
             // CkBViewPassword
             // 
@@ -125,6 +136,17 @@
             this.CkBViewPassword.Text = "Show Password";
             this.CkBViewPassword.UseVisualStyleBackColor = true;
             this.CkBViewPassword.CheckedChanged += new System.EventHandler(this.CkBViewPassword_CheckedChanged);
+            // 
+            // CEmail
+            // 
+            this.CEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CEmail.BackColor = System.Drawing.Color.Transparent;
+            this.CEmail.Location = new System.Drawing.Point(18, 150);
+            this.CEmail.Name = "CEmail";
+            this.CEmail.PasswordCharType = '\0';
+            this.CEmail.Size = new System.Drawing.Size(450, 82);
+            this.CEmail.TabIndex = 29;
+            this.CEmail.Title = "Email";
             // 
             // label1
             // 
@@ -152,6 +174,7 @@
             this.BtnSignUp.TabIndex = 18;
             this.BtnSignUp.Text = "Log In";
             this.BtnSignUp.UseVisualStyleBackColor = false;
+            this.BtnSignUp.Click += new System.EventHandler(this.BtnSignUp_Click);
             // 
             // LnkToHomepage
             // 
@@ -166,28 +189,6 @@
             this.LnkToHomepage.TabStop = true;
             this.LnkToHomepage.Text = "Back";
             this.LnkToHomepage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkToHomepage_LinkClicked);
-            // 
-            // inputField5
-            // 
-            this.inputField5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.inputField5.BackColor = System.Drawing.Color.Transparent;
-            this.inputField5.Location = new System.Drawing.Point(0, 3);
-            this.inputField5.Name = "inputField5";
-            this.inputField5.PasswordCharType = '*';
-            this.inputField5.Size = new System.Drawing.Size(450, 82);
-            this.inputField5.TabIndex = 32;
-            this.inputField5.Title = "Password";
-            // 
-            // inputField2
-            // 
-            this.inputField2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.inputField2.BackColor = System.Drawing.Color.Transparent;
-            this.inputField2.Location = new System.Drawing.Point(18, 150);
-            this.inputField2.Name = "inputField2";
-            this.inputField2.PasswordCharType = '\0';
-            this.inputField2.Size = new System.Drawing.Size(450, 82);
-            this.inputField2.TabIndex = 29;
-            this.inputField2.Title = "Email";
             // 
             // LogIn
             // 
@@ -219,9 +220,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.LinkLabel LkLblLogIn;
         private System.Windows.Forms.Panel panel1;
-        private InputField inputField5;
+        private InputField CPassword;
         private System.Windows.Forms.CheckBox CkBViewPassword;
-        private InputField inputField2;
+        private InputField CEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnSignUp;
         private System.Windows.Forms.LinkLabel LnkToHomepage;
